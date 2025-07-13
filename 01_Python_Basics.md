@@ -5,7 +5,7 @@ publisher: Pearson
 isbn: 978-0-13-417327-6
 ---
 
-# Chaptee 1 : Python Basics
+# Chapter 1 : Python Basics
 
 1. Running Python
 
