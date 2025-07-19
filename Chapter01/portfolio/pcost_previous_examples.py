@@ -1,3 +1,10 @@
+"""
+Book: Python Distilled
+Author: David M. Beazley
+Publisher: Pearson
+ISBN: 978-0-13-417327-6
+"""
+
 # pcost.py
 #
 # Reads input lines of the form 'NAME, SHARES, PRICE'.

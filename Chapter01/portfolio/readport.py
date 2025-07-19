@@ -1,3 +1,10 @@
+"""
+Book: Python Distilled
+Author: David M. Beazley
+Publisher: Pearson
+ISBN: 978-0-13-417327-6
+"""
+
 # readport.py
 #
 # Reads a file of 'NAME,SHARES,PRICE' data

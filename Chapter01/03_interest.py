@@ -1,4 +1,11 @@
-#interest.py
+"""
+Book: Python Distilled
+Author: David M. Beazley
+Publisher: Pearson
+ISBN: 978-0-13-417327-6
+"""
+
+# interest.py
 
 princinpal = 1000   # initial amount
 rate = 0.05         # interest rate
