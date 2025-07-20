@@ -7,14 +7,12 @@
 
 ## 2. Python Programs
 
-**Key Concepts:**
-
 - Python programs are text files with `.py` extension
 - Programs can be run from command line: `python filename.py`
 - Python interpreter reads and executes code line by line
 - Programs can be interactive (REPL) or script-based
 
-**Program Structure:**
+### Program Structure
 
 ```python
 #!/usr/bin/env python3  # Shebang line (Unix/Linux)
@@ -38,21 +36,21 @@ if __name__ == "__main__":
 
 ## 3. Primitives, Variables, and Expressions
 
-**Primitive Data Types:**
+### Primitive Data Types
 
 - **Numbers**: `int`, `float`, `complex`
 - **Strings**: `str` (text data)
 - **Booleans**: `True`, `False`
 - **None**: `None` (null value)
 
-**Variables:**
+### Variables
 
 - Names that store values: `name = "Python"`
 - Must start with letter or underscore
 - Case-sensitive: `name` ≠ `Name`
 - Can contain letters, digits, underscores
 
-**Expressions:**
+### Expressions
 
 - Combinations of values, variables, and operators
 - Evaluate to a single value
@@ -62,48 +60,41 @@ if __name__ == "__main__":
 
 ## 4. Arithmetic Operators
 
-**Basic Arithmetic Operators:**
+### Basic Arithmetic Operators
 
-- `+` Addition
-- `-` Subtraction
-- `*` Multiplication
-- `/` Division (returns float)
-- `//` Floor division
-- `%` Modulo (remainder)
-- `**` Exponentiation
+| Symbol | Operation                         | Example Code              |
+| ------ | --------------------------------- | ------------------------- |
+| `+`    | Addition                          | `addition = a + b`        |
+| `-`    | Subtraction                       | `subtraction = a - b`     |
+| `*`    | Multiplicatio                     | `multiplication = a * b`  |
+| `/`    | Division (returns float)          | `division = a / b`        |
+| `//`   | Floor division (integer division) | `floor_division = a // b` |
+| `%`    | Modulo (remainder)                | `modulo = a % b `         |
+| `**`   | Exponentiation                    | `exponentiation = a ** b` |
 
-**Arithmetic Operations:**
+(Working with different number types)
 
 ```python
-# Basic arithmetic
-a, b = 10, 3
 
-addition = a + b        # 13
-subtraction = a - b     # 7
-multiplication = a * b  # 30
-division = a / b        # 3.3333... (float)
-floor_division = a // b # 3 (integer division)
-modulo = a % b          # 1 (remainder)
-exponentiation = a ** b # 1000 (10^3)
-
-# Working with different number types
-int_division = 10 / 2   # 5.0 (always returns float)
-int_floor = 10 // 3     # 3 (integer result)
-float_math = 3.14 * 2   # 6.28
+int_division = 10 / 2 # 5.0 (always returns float)
+int_floor = 10 // 3 # 3 (integer result)
+float_math = 3.14 \* 2 # 6.28
 
 # Negative numbers
+
 negative = -5
-absolute = abs(-5)      # 5
+absolute = abs(-5) # 5
+
 ```
 
-**Operator Precedence:**
+Operator Precedence:
 
 1. Parentheses `()`
 2. Exponentiation `**`
 3. Multiplication/Division `*`, `/`, `//`, `%`
 4. Addition/Subtraction `+`, `-`
 
-**Precedence Examples:**
+Precedence Examples:
 
 ```python
 # Without parentheses (follows precedence)
@@ -117,7 +108,8 @@ complex_expr = 2 ** 3 + 4 * 5 - 6 // 2
 # 2**3=8, 4*5=20, 6//2=3, then 8+20-3=25
 ```
 
-**Arithmetic Concepts:**
+### Arithmetic Concepts
+
 - **Type coercion**: Python automatically converts between number types
 - **Integer division**: `//` always returns an integer
 - **Float division**: `/` always returns a float
@@ -126,41 +118,42 @@ complex_expr = 2 ** 3 + 4 * 5 - 6 // 2
 - **Negative numbers**: Use `-` prefix
 - **Absolute value**: Use `abs()` function
 
-**Operator Reference Table:**
+### Operator Reference Table
 
-| Operator | Name | Example | Result | Notes |
-|----------|------|---------|--------|-------|
-| `+` | Addition | `5 + 3` | `8` | Works with numbers and strings |
-| `-` | Subtraction | `10 - 4` | `6` | Numbers only |
-| `*` | Multiplication | `3 * 7` | `21` | Works with numbers and sequences |
-| `/` | Division | `15 / 3` | `5.0` | Always returns float |
-| `//` | Floor Division | `15 // 4` | `3` | Integer result, rounds down |
-| `%` | Modulo | `17 % 5` | `2` | Remainder after division |
-| `**` | Exponentiation | `2 ** 8` | `256` | Power operation |
-| `()` | Parentheses | `(2 + 3) * 4` | `20` | Override precedence |
+| Operator | Name           | Example       | Result | Notes                            |
+| -------- | -------------- | ------------- | ------ | -------------------------------- |
+| `+`      | Addition       | `5 + 3`       | `8`    | Works with numbers and strings   |
+| `-`      | Subtraction    | `10 - 4`      | `6`    | Numbers only                     |
+| `*`      | Multiplication | `3 * 7`       | `21`   | Works with numbers and sequences |
+| `/`      | Division       | `15 / 3`      | `5.0`  | Always returns float             |
+| `//`     | Floor Division | `15 // 4`     | `3`    | Integer result, rounds down      |
+| `%`      | Modulo         | `17 % 5`      | `2`    | Remainder after division         |
+| `**`     | Exponentiation | `2 ** 8`      | `256`  | Power operation                  |
+| `()`     | Parentheses    | `(2 + 3) * 4` | `20`   | Override precedence              |
 
-**Number Type Conversion Table:**
+### Number Type Conversion Table
 
-| Operation | Input Types | Result Type | Example |
-|-----------|-------------|-------------|---------|
-| `int + int` | `int, int` | `int` | `5 + 3 = 8` |
-| `int + float` | `int, float` | `float` | `5 + 3.0 = 8.0` |
-| `int / int` | `int, int` | `float` | `10 / 2 = 5.0` |
-| `int // int` | `int, int` | `int` | `10 // 3 = 3` |
-| `float ** int` | `float, int` | `float` | `2.5 ** 2 = 6.25` |
+| Operation      | Input Types  | Result Type | Example           |
+| -------------- | ------------ | ----------- | ----------------- |
+| `int + int`    | `int, int`   | `int`       | `5 + 3 = 8`       |
+| `int + float`  | `int, float` | `float`     | `5 + 3.0 = 8.0`   |
+| `int / int`    | `int, int`   | `float`     | `10 / 2 = 5.0`    |
+| `int // int`   | `int, int`   | `int`       | `10 // 3 = 3`     |
+| `float ** int` | `float, int` | `float`     | `2.5 ** 2 = 6.25` |
 
-**Common Arithmetic Functions:**
+### Common Arithmetic Functions
 
-| Function | Purpose | Example | Result |
-|----------|---------|---------|--------|
-| `abs(x)` | Absolute value | `abs(-7)` | `7` |
-| `round(x, n)` | Round to n digits | `round(3.14159, 2)` | `3.14` |
-| `divmod(x, y)` | Division and remainder | `divmod(17, 5)` | `(3, 2)` |
-| `pow(x, y)` | Exponentiation | `pow(2, 10)` | `1024` |
-| `max(x, y, z)` | Maximum value | `max(1, 5, 3)` | `5` |
-| `min(x, y, z)` | Minimum value | `min(1, 5, 3)` | `1` |
+| Function       | Purpose                | Example             | Result   |
+| -------------- | ---------------------- | ------------------- | -------- |
+| `abs(x)`       | Absolute value         | `abs(-7)`           | `7`      |
+| `round(x, n)`  | Round to n digits      | `round(3.14159, 2)` | `3.14`   |
+| `divmod(x, y)` | Division and remainder | `divmod(17, 5)`     | `(3, 2)` |
+| `pow(x, y)`    | Exponentiation         | `pow(2, 10)`        | `1024`   |
+| `max(x, y, z)` | Maximum value          | `max(1, 5, 3)`      | `5`      |
+| `min(x, y, z)` | Minimum value          | `min(1, 5, 3)`      | `1`      |
 
-**Advanced Arithmetic Examples:**
+### Advanced Arithmetic Examples
+
 ```python
 # Working with complex numbers
 complex_num = 3 + 4j
@@ -184,9 +177,81 @@ maximum = max(numbers)        # 9
 minimum = min(numbers)        # 1
 ```
 
+### Bit Manipulation Operators and Functions
+
+Bit Operators
+
+| Symbol | Operation   | Example Code      | Description                   |
+| ------ | ----------- | ----------------- | ----------------------------- |
+| `&`    | Bitwise AND | `result = a & b`  | Sets bit to 1 if both are 1   |
+| `\|`   | Bitwise OR  | `result = a \| b` | Sets bit to 1 if either is 1  |
+| `^`    | Bitwise XOR | `result = a ^ b`  | Sets bit to 1 if different    |
+| `~`    | Bitwise NOT | `result = ~a`     | Inverts all bits              |
+| `<<`   | Left shift  | `result = a << n` | Shifts bits left by n places  |
+| `>>`   | Right shift | `result = a >> n` | Shifts bits right by n places |
+
+Bit Manipulation Examples:
+
+```python
+# Basic bitwise operations
+a, b = 5, 3  # 5 = 101, 3 = 011 in binary
+
+# Bitwise AND
+and_result = a & b      # 101 & 011 = 001 = 1
+
+# Bitwise OR
+or_result = a | b       # 101 | 011 = 111 = 7
+
+# Bitwise XOR
+xor_result = a ^ b      # 101 ^ 011 = 110 = 6
+
+# Bitwise NOT
+not_result = ~a         # ~101 = -6 (two's complement)
+
+# Bit shifting
+left_shift = a << 2     # 101 << 2 = 10100 = 20
+right_shift = a >> 1    # 101 >> 1 = 10 = 2
+
+# Practical examples
+# Check if number is even/odd
+is_even = (a & 1) == 0  # True if even, False if odd
+
+# Multiply/divide by powers of 2
+multiply_by_8 = a << 3  # a * 8
+divide_by_4 = a >> 2    # a // 4
+
+# Set specific bit
+set_bit = a | (1 << 2)  # Set bit at position 2
+
+# Clear specific bit
+clear_bit = a & ~(1 << 0)  # Clear bit at position 0
+
+# Toggle specific bit
+toggle_bit = a ^ (1 << 1)  # Toggle bit at position 1
+```
+
+Bit Manipulation Functions:
+
+```python
+# Built-in functions for bit manipulation
+bin_value = bin(42)         # '0b101010' - binary string
+oct_value = oct(42)         # '0o52' - octal string
+hex_value = hex(42)         # '0x2a' - hexadecimal string
+
+# Count set bits
+bit_count = bin(42).count('1')  # 3 (number of 1s in binary)
+
+# Check if power of 2
+def is_power_of_2(n):
+    return n > 0 and (n & (n - 1)) == 0
+
+# Get lowest set bit
+lowest_bit = n & -n  # Gets the rightmost 1 bit
+```
+
 ## 5. Conditionals and Control Flow
 
-**Conditional Statements:**
+### Conditional Statements
 
 ```python
 # if statement
@@ -211,7 +276,7 @@ x or y    # Logical OR
 not x     # Logical NOT
 ```
 
-**Control Flow:**
+### Control Flow
 
 - **if/elif/else**: Conditional execution
 - **pass**: Empty statement (placeholder)
@@ -219,14 +284,14 @@ not x     # Logical NOT
 
 ## 6. Text Strings
 
-**String Concepts:**
+### String Concepts
 
 - **Immutable**: Strings cannot be changed after creation
 - **Sequence**: Strings are sequences of characters
 - **Indexed**: Access characters by position (0-based)
 - **Slicing**: Extract substrings with slice notation
 
-**String Operations:**
+### String Operations
 
 ```python
 # String creation
@@ -234,6 +299,11 @@ s1 = 'Hello'
 s2 = "World"
 s3 = '''Multi-line
 string'''
+
+print('''Content-type: text/html
+<h1> Hello World </h1>
+Click <a href="http://www.python.org">here</a>.
+''')
 
 # String concatenation
 result = s1 + " " + s2  # "Hello World"
@@ -250,12 +320,44 @@ last = s1[-1]          # 'o'
 sub = s1[1:4]          # 'ell'
 ```
 
+### Common String Methods
+
+| Method         | Description                                | Example                     | Result            |
+| -------------- | ------------------------------------------ | --------------------------- | ----------------- |
+| `upper()`      | Convert to uppercase                       | `"hello".upper()`           | `"HELLO"`         |
+| `lower()`      | Convert to lowercase                       | `"WORLD".lower()`           | `"world"`         |
+| `title()`      | Title case (first letter of each word)     | `"hello world".title()`     | `"Hello World"`   |
+| `capitalize()` | Capitalize first letter                    | `"hello".capitalize()`      | `"Hello"`         |
+| `strip()`      | Remove whitespace from ends                | `"  hello  ".strip()`       | `"hello"`         |
+| `lstrip()`     | Remove whitespace from left                | `"  hello".lstrip()`        | `"hello"`         |
+| `rstrip()`     | Remove whitespace from right               | `"hello  ".rstrip()`        | `"hello"`         |
+| `split()`      | Split into list by delimiter               | `"a,b,c".split(",")`        | `["a", "b", "c"]` |
+| `join()`       | Join list into string                      | `"-".join(["a", "b", "c"])` | `"a-b-c"`         |
+| `replace()`    | Replace substring                          | `"hello".replace("l", "x")` | `"hexxo"`         |
+| `find()`       | Find substring (returns index)             | `"hello".find("ll")`        | `2`               |
+| `index()`      | Find substring (raises error if not found) | `"hello".index("ll")`       | `2`               |
+| `count()`      | Count occurrences                          | `"hello".count("l")`        | `2`               |
+| `startswith()` | Check if starts with                       | `"hello".startswith("he")`  | `True`            |
+| `endswith()`   | Check if ends with                         | `"hello".endswith("lo")`    | `True`            |
+| `isalpha()`    | Check if all alphabetic                    | `"hello".isalpha()`         | `True`            |
+| `isdigit()`    | Check if all digits                        | `"123".isdigit()`           | `True`            |
+| `isalnum()`    | Check if alphanumeric                      | `"hello123".isalnum()`      | `True`            |
+| `isspace()`    | Check if all whitespace                    | `"   ".isspace()`           | `True`            |
+
+### String Formatting Methods
+
+| Method       | Description               | Example                        | Result            |
+| ------------ | ------------------------- | ------------------------------ | ----------------- |
+| `format()`   | Format with placeholders  | `"Hello, {}!".format("Alice")` | `"Hello, Alice!"` |
+| f-strings    | Formatted string literals | `f"Hello, {name}!"`            | `"Hello, Alice!"` |
+| `%` operator | Old-style formatting      | `"Hello, %s!" % "Alice"`       | `"Hello, Alice!"` |
+
 [String Representation Examples](Chapter01/04_string_representation.py)
 [Formatting Examples](Chapter01/05_formatting_example.py)
 
 ## 7. File Input and Output
 
-**File Operations:**
+### File Operations
 
 ```python
 # Reading files
@@ -278,15 +380,13 @@ with open('output.txt', 'w') as file:
 'b'   # Binary mode
 ```
 
-**Key Concepts:**
-
 - **Context managers** (`with` statement) automatically close files
 - **File objects** are iterable (can use in for loops)
 - **Encoding**: Specify encoding for text files: `open('file.txt', 'r', encoding='utf-8')`
 
 ## 8. Lists
 
-**List Concepts:**
+### List Concepts
 
 - **Mutable**: Lists can be modified after creation
 - **Ordered**: Elements maintain their order
@@ -294,7 +394,7 @@ with open('output.txt', 'w') as file:
 - **Heterogeneous**: Can contain different data types
 - **Dynamic**: Can grow or shrink in size
 
-**List Operations:**
+### List Operations
 
 ```python
 # Creating lists
@@ -316,7 +416,7 @@ repeated = [1, 2] * 3   # [1, 2, 1, 2, 1, 2]
 
 [Portfolio Example](Chapter01/06_portfolio_example.py)
 
-**List Methods:**
+### List Methods
 
 - `append(x)` - Add item to end
 - `extend(iterable)` - Add all items from iterable
@@ -331,14 +431,14 @@ repeated = [1, 2] * 3   # [1, 2, 1, 2, 1, 2]
 
 ## 9. Tuples
 
-**Tuple Characteristics:**
+### Tuple Characteristics
 
 - **Immutable**: Cannot be changed after creation
 - **Ordered**: Elements maintain their order
 - **Indexed**: Access elements by position
 - **Heterogeneous**: Can contain different data types
 
-**Tuple Operations:**
+### Tuple Operations
 
 ```python
 # Creating tuples
@@ -359,7 +459,7 @@ point.count(10)    # Count occurrences
 point.index(20)    # Find index of element
 ```
 
-**Use Cases:**
+### Use Cases
 
 - **Return multiple values** from functions
 - **Data that shouldn't change** (coordinates, dates)
@@ -368,7 +468,7 @@ point.index(20)    # Find index of element
 
 ## 10. Sets
 
-**Set Concepts:**
+### Set Concepts
 
 - **Mutable**: Sets can be modified after creation
 - **Unordered**: Elements have no specific order
@@ -376,7 +476,7 @@ point.index(20)    # Find index of element
 - **Unindexed**: Cannot access elements by position
 - **Hashable elements**: Elements must be immutable
 
-**Set Operations:**
+### Set Operations
 
 ```python
 # Creating sets
@@ -400,7 +500,7 @@ symmetric_diff = set1 ^ set2     # {1, 2, 5, 6}
 
 [Sets Example](Chapter01/07_sets_example.py)
 
-**Set Methods:**
+### Set Methods
 
 - `add(elem)` - Add element
 - `remove(elem)` - Remove element (raises KeyError)
@@ -414,7 +514,7 @@ symmetric_diff = set1 ^ set2     # {1, 2, 5, 6}
 
 ## 11. Dictionaries
 
-**Dictionary Concepts:**
+### Dictionary Concepts
 
 - **Mutable**: Dictionaries can be modified after creation
 - **Key-value pairs**: Store data as key-value associations
@@ -422,7 +522,7 @@ symmetric_diff = set1 ^ set2     # {1, 2, 5, 6}
 - **Keys must be hashable**: Keys must be immutable (strings, numbers, tuples)
 - **Values can be anything**: Values can be any Python object
 
-**Dictionary Operations:**
+### Dictionary Operations
 
 ```python
 # Creating dictionaries
@@ -447,7 +547,7 @@ items = list(prices.items())   # Get all key-value pairs
 
 [Dictionary Keys Example](Chapter01/08_dictionary_keys_example.py)
 
-**Dictionary Methods:**
+### Dictionary Methods
 
 - `get(key[, default])` - Get value with optional default
 - `setdefault(key[, default])` - Get value, set default if key doesn't exist
@@ -461,7 +561,7 @@ items = list(prices.items())   # Get all key-value pairs
 
 ## 12. Iteration and Looping
 
-**Loop Types:**
+### Loop Types
 
 ```python
 # for loop with range
@@ -490,13 +590,13 @@ for i in range(10):
         continue   # Skip iteration
 ```
 
-**Iteration Concepts:**
+### Iteration Concepts
 
 - **Iterables**: Objects that can be looped over (lists, strings, files)
 - **Iterators**: Objects that produce values one at a time
 - **Generator expressions**: Memory-efficient iteration: `(x**2 for x in range(5))`
 
-**List Comprehensions:**
+### List Comprehensions
 
 ```python
 # Basic list comprehension
@@ -512,23 +612,32 @@ matrix = [[i+j for j in range(3)] for i in range(3)]
 
 ## 13. Functions
 
-**Function Definition:**
+### Function Definition
 
 ```python
 def greet(name, greeting="Hello"):
-    """Return a greeting message."""
+    # Return a greeting message.
     return f"{greeting}, {name}!"
 
 # Function calls
 message = greet("Alice")           # "Hello, Alice!"
 custom = greet("Bob", "Hi")        # "Hi, Bob!"
 
+# Function can return tuple which includes multiple values
+
+def divide(a, b):
+    q = a // b integer
+    r = a - q * b
+    return (q, r)
+
+quotient, remainder = divide(1456, 33)
+
 # Lambda functions
 square = lambda x: x**2
 result = square(5)  # 25
 ```
 
-**Function Concepts:**
+### Function Concepts
 
 - **Parameters**: Input values (positional, keyword, default)
 - **Return values**: Output from function
@@ -536,7 +645,7 @@ result = square(5)  # 25
 - **Docstrings**: Documentation strings (`"""..."""`)
 - **Lambda functions**: Anonymous one-line functions
 
-**Function Types:**
+### Function Types
 
 ```python
 # Function with default arguments
@@ -556,7 +665,7 @@ def create_profile(name, **kwargs):
 
 ## 14. Exceptions
 
-**Exception Handling:**
+### Exception Handling
 
 ```python
 try:
@@ -571,7 +680,7 @@ finally:
     print("This always executes")
 ```
 
-**Exception Concepts:**
+### Exception Concepts
 
 - **try/except**: Catch and handle errors
 - **Exception hierarchy**: Specific exceptions before general ones
@@ -580,7 +689,7 @@ finally:
 - **raise**: Manually raise exceptions
 - **Custom exceptions**: Define your own exception classes
 
-**Exception Types:**
+### Exception Types
 
 ```python
 # Common built-in exceptions
@@ -600,7 +709,7 @@ class CustomError(Exception):
 
 ## 15. Python Termination
 
-**Program Termination:**
+### Program Termination
 
 ```python
 # Normal termination
@@ -616,7 +725,7 @@ import atexit
 atexit.register(cleanup_function)
 ```
 
-**Termination Concepts:**
+### Termination Concepts
 
 - **Normal exit**: Program completes successfully
 - **Error exit**: Program exits due to error
@@ -626,7 +735,7 @@ atexit.register(cleanup_function)
 
 ## 16. Objects and Classes
 
-**Object-Oriented Programming Concepts:**
+### Object-Oriented Programming Concepts
 
 - **Objects**: Instances of classes that contain data and behavior
 - **Classes**: Blueprints for creating objects
@@ -635,7 +744,7 @@ atexit.register(cleanup_function)
 - **Polymorphism**: Different classes can have methods with the same name
 - **Abstraction**: Hiding complex implementation details
 
-**Class Structure:**
+### Class Structure
 
 ```python
 class Person:
@@ -664,7 +773,7 @@ print(person.greet())  # "Hello, I'm Alice"
 
 ## 17. Modules
 
-**Module Import Syntax:**
+### Module Import Syntax
 
 ```python
 import math                    # Import entire module
@@ -673,7 +782,7 @@ import math as m              # Import with alias
 from math import *            # Import all (not recommended)
 ```
 
-**Module Concepts:**
+### Module Concepts
 
 - **Modules**: Python files that can be imported
 - **Packages**: Directories containing modules
@@ -682,7 +791,7 @@ from math import *            # Import all (not recommended)
 - **`__init__.py`**: Makes directory a package
 - **Relative imports**: Import from same package
 
-**Module Usage:**
+### Module Usage
 
 ```python
 # Creating a module (my_module.py)
@@ -703,7 +812,7 @@ print(greet("Bob"))              # "Hello, Bob!"
 
 ## 18. Script Writing
 
-**Script Structure:**
+### Script Structure
 
 ```python
 #!/usr/bin/env python3
@@ -729,7 +838,7 @@ if __name__ == "__main__":
     main()
 ```
 
-**Script Best Practices:**
+### Script Best Practices
 
 - **Shebang line**: `#!/usr/bin/env python3`
 - **Docstring**: Document purpose and usage
@@ -740,7 +849,7 @@ if __name__ == "__main__":
 
 ## 19. Packages
 
-**Package Structure:**
+### Package Structure
 
 ```
 mypackage/
@@ -753,7 +862,7 @@ mypackage/
 └── setup.py             # Package metadata
 ```
 
-**Package Concepts:**
+### Package Concepts
 
 - **`__init__.py`**: Required file to make directory a package
 - **Namespace packages**: Packages without `__init__.py`
@@ -764,7 +873,7 @@ mypackage/
 
 ## 20. Structuring an Application
 
-**Application Structure:**
+### Application Structure
 
 ```
 myapp/
@@ -783,7 +892,7 @@ myapp/
 └── README.md           # Project description
 ```
 
-**Application Design Principles:**
+### Application Design Principles
 
 - **Separation of concerns**: Different modules for different responsibilities
 - **Single responsibility**: Each module has one clear purpose
@@ -794,7 +903,7 @@ myapp/
 
 ## 21. Managing Third-Party Packages
 
-**Package Management:**
+### Package Management
 
 ```bash
 # Install packages
@@ -813,7 +922,7 @@ pip show package_name      # Show package info
 pip freeze > requirements.txt  # Save dependencies
 ```
 
-**Package Management Concepts:**
+### Package Management Concepts
 
 - **pip**: Python package installer
 - **Virtual environments**: Isolated Python environments
@@ -824,14 +933,14 @@ pip freeze > requirements.txt  # Save dependencies
 
 ## 22. Python: It Fits Your Brain
 
-**Python Philosophy:**
+### Python Philosophy
 
 - **Readability**: Code should be easy to read and understand
 - **Explicit over implicit**: Clear is better than clever
 - **Simple over complex**: Simple solutions are preferred
 - **Practicality**: Practicality beats purity
 
-**Python Design Principles:**
+### Python Design Principles
 
 - **The Zen of Python**: `import this` reveals Python's philosophy
 - **Batteries included**: Rich standard library
@@ -840,44 +949,9 @@ pip freeze > requirements.txt  # Save dependencies
 - **Learning curve**: Gentle learning curve for beginners
 - **Versatility**: Suitable for many domains (web, data, AI, etc.)
 
-**Key Strengths:**
+### Key Strengths
 
 - **Rapid development**: Quick prototyping and development
 - **Large ecosystem**: Extensive third-party packages
 - **Integration**: Easy integration with other languages
 - **Documentation**: Excellent documentation and tutorials
-
-## Key Python Concepts Summary
-
-**Data Types:**
-
-- **Numbers**: `int`, `float`, `complex`
-- **Strings**: `str` (immutable)
-- **Lists**: `list` (mutable, ordered)
-- **Tuples**: `tuple` (immutable, ordered)
-- **Sets**: `set` (mutable, unordered, unique)
-- **Dictionaries**: `dict` (mutable, key-value pairs)
-
-**Control Flow:**
-
-- `if/elif/else` - Conditional statements
-- `for` - Iteration over sequences
-- `while` - Conditional loops
-- `try/except` - Exception handling
-
-**Functions:**
-
-- `def` - Function definition
-- `lambda` - Anonymous functions
-- `return` - Return values
-- `*args` - Variable arguments
-- `**kwargs` - Variable keyword arguments
-
-**Classes:**
-
-- `class` - Class definition
-- `__init__` - Constructor method
-- `self` - Instance reference
-- `@property` - Property decorator
-- `@staticmethod` - Static method decorator
-- `@classmethod` - Class method decorator
